@@ -1,0 +1,123 @@
+
+.dndflow {
+ flex-direction: column;
+ display: flex;
+ flex-grow: 1;
+ height: 100%;
+}
+
+.dndflow aside {
+ border-right: 1px solid #eee;
+ padding: 15px 10px;
+ font-size: 12px;
+ background: #fcfcfc;
+}
+
+.dndflow aside .description {
+ margin-bottom: 10px;
+}
+
+.dndflow .dndnode {
+ margin-top: 10px;
+ height: 20px;
+ padding: 4px;
+ border: 1px solid #1a192b;
+ border-radius: 2px;
+ margin-bottom: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ cursor: grab;
+ margin: auto;
+ margin-top: 20px!important;
+}
+
+.dndflow .dndnode.input {
+ padding: 20px;
+ margin: auto;
+ text-align: center;
+ border-color: #0041d0;
+ height: 11%;
+ width: 36%;
+ border-radius: 50%;
+}
+
+.dndflow .dndnode.output {
+ border-color: #ff0072;
+}
+
+.dndflow .reactflow-wrapper {
+ flex-grow: 1;
+ height: 100%;
+}
+
+.dndflow .selectall {
+ margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+ .dndflow {
+  flex-direction: row;
+  flex-flow: row-reverse ;
+
+ }
+
+ .dndflow aside {
+  width: 15%;
+  max-width: 250px;
+ }
+}
+/*****Shapes*******/
+.react-flow__node-input{
+ height: 50px!important;
+ padding: 8px!important;
+ width: 50px!important;
+ background-color: rgb(14, 12, 12);
+ border-radius: 50%!important;
+}
+/* .react-flow__node-input:after{
+ content: "edit";
+ right: 20px!important;
+ width: 14px;
+  position: absolute;
+  height: 15px;
+  left: 45px;
+  width: 30px;
+  top: -6px;
+  border-radius: 50px;
+  color: white;
+  font-size: 10px!important;
+  background-color: #0041d0;
+  cursor: pointer;
+} */
+
+/**dimand Shape start***/
+.processing_node{
+ width: 60px!important;
+ align-items: center;
+  height: 61px!important;
+  -ms-transform: rotate(20deg);
+  transform: rotate(48deg)!important;
+  color: #1a192b;
+ 
+}
+.precessing-text{
+ padding-right: 10px;
+ line-height: 10px;
+ text-align: center;
+ rotate: -49deg;
+ font-size: 12px!important;
+}
+/**dimand Shape end***/
+
+/****Editbar*****/
+.editbar{
+ background: rgb(227, 227, 227);
+ width: 200px;
+ padding: 10px;
+}
+
+.dmndshp{
+  background-color: #e8ecf5;
+  border-radius: 10px !important;
+}

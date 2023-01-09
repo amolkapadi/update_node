@@ -1,0 +1,14 @@
+
+  .btn{
+    margin-top: 10px;
+    background-color: green;
+    color: white;
+  }
+
+
+  .react-flow__node-default.selectable{
+    background-color: antiquewhite;
+  }
+  .offcanvas-end {
+    width: 250px;
+  }
