@@ -15,7 +15,7 @@ export default () => {
         Start/End Node
       </div>
 
-      <div className="dndnode" onDragStart={(event) => onDragStart(event, 'Def')} draggable>
+      <div className="dndnode" onDragStart={(event) => onDragStart(event, 'Default')} draggable>
         Default Node
       </div>
 
