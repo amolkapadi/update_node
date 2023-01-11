@@ -11,7 +11,7 @@ const initialNodes = [
   {
     id: '1',
     type: 'input',
-    class:"",
+    class: "",
     data: { label: 'Start' },
     position: { x: 250, y: 5 },
   },
@@ -27,11 +27,12 @@ const DnDFlow = () => {
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [reactFlowInstance, setReactFlowInstance] = useState(null);
   // const [nodeHidden, setNodeHidden] = useState(false);
+  
   const [editValue, setEditValue] = useState()
   const [id, setId] = useState()
 
-//offcanvas
-const [show, setShow] = useState(false);
+  //offcanvas
+  const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -52,6 +53,8 @@ const [show, setShow] = useState(false);
     })
     setNodes(res)
     setShow(true)
+    setEditValue("")
+
   }
 
   const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), []);
@@ -77,9 +80,6 @@ const [show, setShow] = useState(false);
       if (typeof type === 'undefined' || !type) {
         return;
       }
-
-
-
       const position = reactFlowInstance.project({
         x: event.clientX - reactFlowBounds.left,
         y: event.clientY - reactFlowBounds.top,
@@ -87,7 +87,7 @@ const [show, setShow] = useState(false);
 
       const newNode = {
         id: getId(),
-        type,
+        type:"",
         position,
         data: { label: `${type}` },
       };
@@ -95,13 +95,13 @@ const [show, setShow] = useState(false);
     },
     [reactFlowInstance]
   );
- 
+
 
 
   return (
 
     <div className="dndflow">
-       {/* <Button variant="primary" onClick={handleShow}>
+      {/* <Button variant="primary" onClick={handleShow}>
         Launch
       </Button> */}
 
@@ -110,18 +110,18 @@ const [show, setShow] = useState(false);
           <Offcanvas.Title>Update Node</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-        <div >
-          <div >
-            <label>label:</label><br/>
-            <input value={editValue} onChange={(e) => setEditValue(e.target.value)} /> <br/>
-            <button onClick={handleEdit} className="btn">Update</button>
-          </div>
-        </div>
+         
+            <div >
+              <label>label:</label><br />
+              <input value={editValue} onChange={(e) => setEditValue(e.target.value)}  className="input-box"/> <br />
+              <button onClick={handleEdit} className="btn">Update</button>
+            </div>
+          
         </Offcanvas.Body>
       </Offcanvas>
       <ReactFlowProvider>
 
-       
+
 
         <div className="reactflow-wrapper" ref={reactFlowWrapper}>
           <ReactFlow

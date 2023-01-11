@@ -6,9 +6,19 @@
   }
 
 
-  .react-flow__node-default.selectable{
+  /* .react-flow__node-default.selectable{
     background-color: antiquewhite;
-  }
+  } */
+  
   .offcanvas-end {
     width: 250px;
+
   }
+.modal{
+  z-index: 1055;
+}
+.offcanvas.show {
+  transform: none;
+  z-index: 99999;
+  position: absolute;
+}

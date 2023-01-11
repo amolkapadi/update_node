@@ -28,9 +28,7 @@ export default () => {
       </div>
 
       <div className="dndnode output" onDragStart={(event) => onDragStart(event, 'team')} draggable>
-
         Teams
-
       </div>
 
       <div className="dndnode output" onDragStart={(event) => onDragStart(event, 'team')} draggable>
